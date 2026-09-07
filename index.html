@@ -159,6 +159,14 @@ p.sub{margin-top:14px; font-size:17px; color:var(--body-muted); max-width:680px;
 .idea-card p.desc{font-size:16px; color:var(--body-muted); line-height:1.65;}
 .idea-card .idea-note{margin-top:16px; background:var(--canvas-parchment); border-radius:12px; padding:14px 16px; font-size:13.5px; color:var(--body-muted);}
 .idea-card .idea-note b{color:var(--ink);}
+.idea-card .proof-strip{margin-top:22px; border-top:1px dashed var(--hairline); padding-top:20px;}
+.idea-card .proof-label{font-size:12px; font-weight:700; color:var(--success); text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px;}
+.idea-card .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+@media (max-width:780px){ .idea-card .proof-grid{grid-template-columns:1fr;} }
+.idea-card .proof-item{background:var(--surface-pearl); border:1px solid var(--hairline); border-radius:12px; padding:14px 16px; display:flex; flex-direction:column; gap:5px;}
+.idea-card .proof-item b{font-size:14px; font-weight:700; color:var(--ink);}
+.idea-card .proof-item span{font-size:12.5px; color:var(--body-muted); line-height:1.5;}
+.idea-card .proof-item .proof-date{font-size:11px; color:var(--success); font-weight:600;}
 
 /* ---------- reference / similar case cards ---------- */
 .case-card{background:var(--canvas); border:1px solid var(--hairline); border-radius:18px; padding:24px; display:flex; flex-direction:column; gap:14px;}
@@ -479,10 +487,31 @@ footer .container{display:flex; justify-content:space-between; flex-wrap:wrap; g
     <h2 class="title reveal">플랫폼 하나로, 직원 셔틀과 통원객 셔틀을 함께 지킵니다</h2>
 
     <div class="idea-card reveal">
-      <div class="idea-head"><div class="idea-num">1</div><h3>직원용 셔틀, 낙찰 시 시스템을 무료로 제공합니다</h3></div>
+      <div class="idea-head"><div class="idea-num">1</div><h3>직원용 셔틀을 도입하시면, 시스템을 무료로 제공합니다</h3></div>
       <div class="idea-body">
-        <p class="desc">현재 운행 중인 직원용 셔틀버스 26대의 운행을 씨엘모빌리티가 낙찰받으면, 헬로버스 2.0 태그리스 시스템(App·관제·예약)을 별도 비용 없이 함께 제공합니다. 씨엘모빌리티가 잘하는 플랫폼 기술과, 전문 운행사의 실제 운행 역량을 하나로 묶은 <b>플랫폼 운송(플랫폼+운행 통합 공급)</b> 모델입니다.</p>
-        <div class="idea-note"><b>이렇게 작동합니다 —</b> 낙찰 후 운행은 검증된 전문 운수사가 맡고, 예약·배차·관제 플랫폼은 씨엘모빌리티가 무상 공급합니다. 별도의 IT 구축 예산 없이 최신 셔틀 서비스를 도입할 수 있습니다.</div>
+        <p class="desc">현재 운행 중인 직원용 셔틀버스 26대의 운행을 씨엘모빌리티로 도입하시면, 헬로버스 2.0 태그리스 시스템(App·관제·예약)을 별도 비용 없이 함께 제공합니다. 씨엘모빌리티가 잘하는 플랫폼 기술과, 전문 운행사의 실제 운행 역량을 하나로 묶은 <b>플랫폼 운송(플랫폼+운행 통합 공급)</b> 모델로, 이미 국내 대기업 다수가 이 방식으로 통근버스를 운영하고 있습니다.</p>
+        <div class="idea-note"><b>이렇게 작동합니다 —</b> 도입 후 운행은 검증된 전문 운수사가 맡고, 예약·배차·관제 플랫폼은 씨엘모빌리티가 무상 공급합니다. 별도의 IT 구축 예산 없이 최신 셔틀 서비스를 도입할 수 있습니다.</div>
+      </div>
+      <div class="proof-strip">
+        <p class="proof-label">이미 실제로 운영 중인 모델입니다</p>
+        <div class="proof-grid">
+          <div class="proof-item">
+            <b>카카오</b>
+            <span>20여개 계열사 임직원 통근버스, 플랫폼+운영 위탁 선정</span>
+            <span class="proof-date">2025.01~ 운영 중</span>
+          </div>
+          <div class="proof-item">
+            <b>삼성전자 평택캠퍼스</b>
+            <span>수요응답형 기업 셔틀버스 플랫폼 공급·운행</span>
+            <span class="proof-date">2023.12~ 운영 중</span>
+          </div>
+          <div class="proof-item">
+            <b>현대자동차·기아 그룹</b>
+            <span>그룹 통근버스 통합관리 시스템 구축</span>
+            <span class="proof-date">운영 중</span>
+          </div>
+        </div>
+        <p class="src" style="margin-top:12px;">출처 · 한경매거진(2025.01.15) "㈜카카오, 임직원 통근버스 운영사로 씨엘모빌리티 선정", 씨엘모빌리티 보도자료(2023.12.12~14, epnc·aving·koit·hellot 등), 스마트시티 솔루션마켓 기업정보(씨엘모빌리티 적용실적)</p>
       </div>
     </div>
 
@@ -535,7 +564,7 @@ footer .container{display:flex; justify-content:space-between; flex-wrap:wrap; g
 
     <div class="timeline reveal" style="margin-top:56px;">
       <div class="tl-item"><b>PHASE 1 · 1개월</b><p>탑승자·기사 App 배포, 통원객 셔틀 BLE 비콘 설치 — 예약·알림 기능부터 빠르게 체감 (Quick Win)</p></div>
-      <div class="tl-item"><b>PHASE 2 · 2~3개월</b><p>직원 셔틀 낙찰 연동 시 태그리스 시스템 무상 전환, 통원객 셔틀 직원탑승 알림 기능 활성화</p></div>
+      <div class="tl-item"><b>PHASE 2 · 2~3개월</b><p>직원 셔틀 도입 연동 시 태그리스 시스템 무상 전환, 통원객 셔틀 직원탑승 알림 기능 활성화</p></div>
       <div class="tl-item"><b>PHASE 3 · 상시 운영</b><p>관제 데이터 기반 노선 최적화, 만족도·이용 데이터 정기 리포트</p></div>
     </div>
   </div>
@@ -636,6 +665,31 @@ footer .container{display:flex; justify-content:space-between; flex-wrap:wrap; g
         </div>
         <p style="margin-top:20px; font-size:14px; color:var(--body-muted); line-height:1.6;">현대차그룹·LG그룹·대한항공 등 354개 기업이 MOBBLE 통근 플랫폼을 사용 중이며, 통근버스 운영 위탁 노선은 500여 개에 달합니다. 인천·대구·세종·울산 등 지자체 수요응답(DRT) 사업에서도 국내 최초·최대 실적을 보유하고 있습니다.</p>
         <p class="src" style="margin-top:12px;">씨엘모빌리티 회사소개서 (2025.02), 헬로버스 솔루션 소개서 (2025.03)</p>
+      </div>
+    </div>
+
+    <p style="margin-top:44px; font-size:13px; font-weight:700; color:var(--body-muted-2); text-transform:uppercase; letter-spacing:.06em;">플랫폼 운송 사업 — 이미 도입한 기업들</p>
+    <div class="grid3 reveal-stagger" style="margin-top:16px;">
+      <div class="case-card">
+        <div class="case-brand">삼성전자 · 평택캠퍼스</div>
+        <h3>삼성그룹 계열사도 이미 함께하고 있습니다</h3>
+        <div class="case-stat"><b class="tabular">2023.12</b><span style="font-size:13px; color:var(--body-muted);">부터 운영 중</span></div>
+        <p class="small light">수요응답형 기업 셔틀버스 플랫폼을 공급, 실시간 호출 기반으로 운행 중입니다.</p>
+        <p class="small light">출처 · 씨엘모빌리티 보도자료 (2023.12.12~14, epnc·aving·koit·hellot·autodaily 등 다수 매체)</p>
+      </div>
+      <div class="case-card">
+        <div class="case-brand">카카오 · 20여개 계열사</div>
+        <h3>이 제안과 같은 방식, 플랫폼+운영 통합 위탁</h3>
+        <div class="case-stat"><b class="tabular">2025.01</b><span style="font-size:13px; color:var(--body-muted);">부터 운영 중</span></div>
+        <p class="small light">㈜카카오가 임직원 통근버스 위탁 운영사로 씨엘모빌리티를 선정, 모블 플랫폼으로 예약·결제·실시간 관제를 제공합니다.</p>
+        <p class="small light">출처 · 한경매거진 (2025.01.15)</p>
+      </div>
+      <div class="case-card">
+        <div class="case-brand">현대자동차 · 기아 그룹</div>
+        <h3>대기업 그룹 규모의 통합관리 실적</h3>
+        <div class="case-stat"><b class="tabular">그룹 단위</b><span style="font-size:13px; color:var(--body-muted);">통합관리 구축</span></div>
+        <p class="small light">현대자동차·기아 그룹 통근버스 통합관리 시스템을 구축·운영하고 있습니다.</p>
+        <p class="small light">출처 · 스마트시티 솔루션마켓 기업정보(씨엘모빌리티 적용실적)</p>
       </div>
     </div>
   </div>
