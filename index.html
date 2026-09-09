@@ -268,7 +268,7 @@ footer .container{display:flex; justify-content:space-between; flex-wrap:wrap; g
       </div>
       <div class="pain-card" style="border:none; background:var(--canvas);">
         <div class="tag" style="background:transparent; color:var(--primary); padding:0; font-size:12px;">WHAT</div>
-        <p style="font-size:15px; color:var(--ink);">전용 단말기 없이 App만으로 탑승을 인증하는 예약형 셔틀 플랫폼과, 통원객 전용 셔틀에 직원이 탑승하면 기사에게 자동으로 알려주는 보호 기능을 함께 제안합니다.</p>
+        <p style="font-size:15px; color:var(--ink);">전용 단말기 없이 App만으로 탑승을 인증하는 예약형 셔틀 플랫폼과, 통원객 전용 셔틀 직원 탑승을 부서별 통계로 관리하는 기능을 함께 제안합니다.</p>
       </div>
       <div class="pain-card" style="border:none; background:var(--canvas);">
         <div class="tag" style="background:transparent; color:var(--primary); padding:0; font-size:12px;">HOW MUCH</div>
@@ -524,50 +524,74 @@ footer .container{display:flex; justify-content:space-between; flex-wrap:wrap; g
     </div>
 
     <div class="idea-card reveal">
-      <div class="idea-head"><div class="idea-num">2</div><h3>통원객 셔틀, 직원이 타면 기사에게 바로 알려드립니다</h3></div>
+      <div class="idea-head"><div class="idea-num">2</div><h3>통원객 셔틀 직원 탑승, 부서별 통계로 관리합니다</h3></div>
       <div class="idea-body">
-        <p class="desc">같은 BLE 시스템을 통원객 전용 셔틀에도 적용합니다. 직원이 등록된 스마트폰을 소지한 채 탑승하면, 기사 App에 <b>"직원입니다"</b> 알림이 즉시 뜨고 기사가 안내·제지할 수 있습니다. 환자·보호자가 이용해야 할 좌석을 지키는 가장 현실적인 방법입니다.</p>
-        <div class="idea-note"><b>솔직한 한계 —</b> 직원이 블루투스를 꺼두면 인식되지 않습니다. 다만 출퇴근 시간대 블루투스는 이어폰 연결 등으로 상시 켜두는 경우가 대부분이라, 완벽한 차단이 아닌 <b>실효적인 억지력</b>으로서 충분한 가치가 있습니다.</div>
+        <p class="desc">같은 BLE 시스템을 통원객 전용 셔틀에도 적용합니다. 기사용 App 화면은 기존과 동일하게 그대로 사용하며, 대신 <b>관리자용 웹</b>에서 어느 부서 소속 직원이 언제 탑승했는지를 부서별로 집계합니다. 이 통계를 정기적으로 각 부서에 전달해, 부서 차원에서 자율적으로 개선을 유도하는 방식입니다.</p>
+        <div class="idea-note"><b>솔직한 한계 —</b> 직원이 블루투스를 꺼두면 통계에 잡히지 않고, 실시간 탑승 제지 효과는 없습니다. 다만 개인을 특정해 현장에서 지적하는 방식이 아니라 <b>부서 단위 통계로 개선을 유도하는 방식</b>이라 개인정보 노출 우려 없이도 충분한 관리 효과를 기대할 수 있습니다.</div>
       </div>
     </div>
 
     <div class="diagram reveal">
-      <svg viewBox="0 0 880 190" style="width:100%; height:auto; min-width:560px;" role="img" aria-label="통원객 셔틀 직원 탑승 방지 알림 흐름도">
+      <svg viewBox="0 0 900 190" style="width:100%; height:auto; min-width:560px;" role="img" aria-label="통원객 셔틀 직원 탑승 부서별 통계 관리 흐름도">
         <g font-family="-apple-system,sans-serif">
-        <rect x="20" y="55" width="150" height="80" rx="14" fill="#fafafc" stroke="#e0e0e0"/>
-        <text x="95" y="90" text-anchor="middle" font-size="24">🧑‍💼</text>
-        <text x="95" y="115" text-anchor="middle" font-size="12" fill="#1d1d1f" font-weight="600">직원의 스마트폰</text>
-        <text x="95" y="130" text-anchor="middle" font-size="10.5" fill="#6e6e73">BLE 신호 보유</text>
+        <rect x="10" y="55" width="160" height="80" rx="14" fill="#fafafc" stroke="#e0e0e0"/>
+        <text x="90" y="90" text-anchor="middle" font-size="24">🧑‍💼</text>
+        <text x="90" y="115" text-anchor="middle" font-size="12" fill="#1d1d1f" font-weight="600">직원의 스마트폰</text>
+        <text x="90" y="130" text-anchor="middle" font-size="10.5" fill="#6e6e73">BLE 신호 보유</text>
 
-        <path d="M172 95 H255" stroke="#c8c8cc" stroke-width="2" marker-end="url(#arrowGrey)"/>
-        <text x="212" y="85" text-anchor="middle" font-size="10.5" fill="#6e6e73">탑승 · 자동 스캔</text>
+        <path d="M172 95 H243" stroke="#c8c8cc" stroke-width="2" marker-end="url(#arrowGrey)"/>
+        <text x="207" y="85" text-anchor="middle" font-size="10.5" fill="#6e6e73">탑승 · 자동 스캔</text>
 
-        <rect x="257" y="55" width="150" height="80" rx="14" fill="#fafafc" stroke="#e0e0e0"/>
-        <text x="332" y="90" text-anchor="middle" font-size="24">🚌</text>
-        <text x="332" y="115" text-anchor="middle" font-size="12" fill="#1d1d1f" font-weight="600">통원객 셔틀</text>
-        <text x="332" y="130" text-anchor="middle" font-size="10.5" fill="#6e6e73">BLE 비콘 인식</text>
+        <rect x="245" y="55" width="160" height="80" rx="14" fill="#fafafc" stroke="#e0e0e0"/>
+        <text x="325" y="90" text-anchor="middle" font-size="24">🚌</text>
+        <text x="325" y="115" text-anchor="middle" font-size="12" fill="#1d1d1f" font-weight="600">통원객 셔틀</text>
+        <text x="325" y="130" text-anchor="middle" font-size="10.5" fill="#6e6e73">기사 App은 기존과 동일</text>
 
-        <path d="M409 95 H492" stroke="#0066cc" stroke-width="2" marker-end="url(#arrowBlue)"/>
+        <path d="M407 95 H478" stroke="#0066cc" stroke-width="2" marker-end="url(#arrowBlue)"/>
 
-        <rect x="494" y="45" width="180" height="100" rx="14" fill="#eef5ff" stroke="#0066cc" stroke-width="1.5"/>
-        <text x="584" y="80" text-anchor="middle" font-size="24">📱</text>
-        <text x="584" y="105" text-anchor="middle" font-size="12" fill="#0066cc" font-weight="700">기사 App 알림</text>
-        <text x="584" y="122" text-anchor="middle" font-size="11" fill="#0066cc" font-weight="700">"직원입니다"</text>
-        <text x="584" y="137" text-anchor="middle" font-size="10" fill="#6e6e73">즉시 팝업</text>
+        <rect x="480" y="40" width="200" height="110" rx="14" fill="#eef5ff" stroke="#0066cc" stroke-width="1.5"/>
+        <text x="580" y="75" text-anchor="middle" font-size="24">💻</text>
+        <text x="580" y="100" text-anchor="middle" font-size="12" fill="#0066cc" font-weight="700">관리자용 웹</text>
+        <text x="580" y="117" text-anchor="middle" font-size="11" fill="#0066cc" font-weight="700">부서별 탑승 통계 집계</text>
+        <text x="580" y="132" text-anchor="middle" font-size="10" fill="#6e6e73">부서 · 인원 · 시간</text>
 
-        <path d="M676 95 H759" stroke="#c8452e" stroke-width="2" marker-end="url(#arrowRed2)"/>
+        <path d="M682 95 H753" stroke="#1f8a4c" stroke-width="2" marker-end="url(#arrowGreen)"/>
 
-        <rect x="761" y="55" width="100" height="80" rx="14" fill="#fbe9e5" stroke="#c8452e"/>
-        <text x="811" y="90" text-anchor="middle" font-size="24">🚫</text>
-        <text x="811" y="115" text-anchor="middle" font-size="11" fill="#c8452e" font-weight="700">안내 · 제지</text>
+        <rect x="755" y="55" width="135" height="80" rx="14" fill="#e7f5ec" stroke="#1f8a4c"/>
+        <text x="822" y="90" text-anchor="middle" font-size="24">📊</text>
+        <text x="822" y="115" text-anchor="middle" font-size="11" fill="#1f8a4c" font-weight="700">부서별 정기 리포트</text>
         </g>
         <defs>
           <marker id="arrowGrey" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c8c8cc"/></marker>
           <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0066cc"/></marker>
-          <marker id="arrowRed2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c8452e"/></marker>
+          <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1f8a4c"/></marker>
         </defs>
       </svg>
-      <div class="diagram-cap">직원 스마트폰의 BLE 신호를 셔틀이 인식하면, 기사 App에 즉시 "직원입니다" 알림이 표시됩니다.</div>
+      <div class="diagram-cap">직원 스마트폰의 BLE 신호를 셔틀이 인식하면, 기사 App 화면은 변경 없이 그대로 사용하고 관리자용 웹에서 부서별 탑승 통계를 집계해 각 부서에 정기적으로 전달합니다.</div>
+    </div>
+
+    <div class="idea-card reveal" style="margin-top:32px;">
+      <div class="idea-head"><div class="idea-num" style="background:var(--success);">✓</div><h3>개인정보·법률 검토는 이미 마쳤습니다</h3></div>
+      <div class="idea-body" style="grid-template-columns:1fr;">
+        <p class="desc">BLE 기반 탑승 확인 시스템을 도입할 때 병원·공공기관에서 공통으로 확인하는 절차입니다. 특별한 리스크가 아니라 씨엘모빌리티가 기존 프로젝트에서 매번 거쳐온 표준 절차이며, 계약 체결 전까지 아래와 같이 정리해 두겠습니다.</p>
+      </div>
+      <div class="grid3" style="margin-top:20px;">
+        <div class="pain-card" style="padding:20px;">
+          <div class="tag" style="background:var(--success-soft); color:var(--success);">인허가 · 확인 완료</div>
+          <h3 style="font-size:16px;">위치기반서비스사업 신고</h3>
+          <p style="font-size:13.5px;">씨엘모빌리티는 이미 위치기반서비스사업자로 신고를 마친 회사입니다. 추가 인허가 절차 없이 바로 서비스 제공이 가능합니다.</p>
+        </div>
+        <div class="pain-card" style="padding:20px;">
+          <div class="tag" style="background:var(--success-soft); color:var(--success);">위탁계약 · 체결 예정</div>
+          <h3 style="font-size:16px;">병원-씨엘모빌리티 개인정보 위탁계약</h3>
+          <p style="font-size:13.5px;">개인정보 보호법 제26조에 따라 목적·범위, 재위탁 제한, 감독권, 사고통지 의무를 명시한 서면 위탁계약을 체결하고, 병원 개인정보 처리방침도 함께 갱신합니다.</p>
+        </div>
+        <div class="pain-card" style="padding:20px;">
+          <div class="tag" style="background:var(--success-soft); color:var(--success);">데이터 보관 · 확인 예정</div>
+          <h3 style="font-size:16px;">데이터 저장 위치 확인</h3>
+          <p style="font-size:13.5px;">씨엘모빌리티 인프라의 데이터 저장 위치를 사전 확인하고, 국외 이전이 발생하는 경우 개인정보 보호법 제4절 요건(고지·동의 등)을 그대로 적용합니다.</p>
+        </div>
+      </div>
     </div>
 
     <div class="timeline reveal" style="margin-top:56px;">
